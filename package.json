@@ -1,0 +1,23 @@
+{
+  "name": "example-nestjs-migrations",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "ts-node": "3.3.0",
+    "@types/node": "^8.0.29",
+    "typescript": "3.3.3333"
+  },
+  "dependencies": {
+    "typeorm": "0.2.22",
+    "reflect-metadata": "^0.1.10",
+    "pg": "^7.3.0",
+    "mysql": "^2.14.1"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "start": "ts-node src/index.ts",
+    "initial": "ts-node ./node_modules/typeorm/cli.js migration:generate -n initial",
+    "run:migrate":  "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "revert:migrate":  "ts-node ./node_modules/typeorm/cli.js migration:revert "
+  }
+}
